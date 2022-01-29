@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email_label">Email</string>
+    <string name="password_label">Password</string>
+    <string name="login_button">Login</string>
+    <string name="create_account_button">Create an account</string>
+    <string name="welcome_title">Welcome</string>
+    <string name="welcome_message">Welcome to the Shope Store Inventory. Start managing your shoe inventory with us.</string>
+    <string name="welcome_start_button">Start</string>
+    <string name="instruction_title">Instructions</string>
+    <string name="instruction_body">Add new shoes to the store and manage the inventory from here.</string>
 </resources>
