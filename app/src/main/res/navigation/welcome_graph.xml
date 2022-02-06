@@ -11,7 +11,11 @@
         android:label="@string/welcome_fragment_label">
         <action
             android:id="@+id/action_welcomeFragment_to_instructionFragment"
-            app:destination="@id/instructionFragment" />
+            app:destination="@id/instructionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/instructionFragment"
@@ -20,7 +24,13 @@
         android:label="@string/instruction_fragment_label">
         <action
             android:id="@+id/action_instructionFragment_to_shoe_graph"
-            app:destination="@id/shoe_graph" />
+            app:destination="@id/shoe_graph"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/welcome_graph"
+            app:popUpToInclusive="true" />
     </fragment>
     <include app:graph="@navigation/shoe_graph" />
 </navigation>

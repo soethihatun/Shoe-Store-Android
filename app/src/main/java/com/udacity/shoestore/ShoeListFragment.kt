@@ -36,7 +36,7 @@ class ShoeListFragment : Fragment() {
         }
 
         binding.fabAddShoe.setOnClickListener {
-            navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment())
+            findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment())
         }
     }
 
