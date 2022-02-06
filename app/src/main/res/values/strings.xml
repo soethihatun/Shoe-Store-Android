@@ -11,4 +11,15 @@
     <string name="welcome_start_button">Start</string>
     <string name="instruction_title">Instructions</string>
     <string name="instruction_body">Add new shoes to the store and manage the inventory from here.</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="shoe_company">Shoe Company</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="shoe_description">Shoe Description</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_save">Save</string>
+    <string name="login_fragment_label">Login</string>
+    <string name="welcome_fragment_label">Welcome</string>
+    <string name="instruction_fragment_label">Instruction</string>
+    <string name="shoes_fragment_label">Shoes</string>
+    <string name="shoe_detail_fragment_label">Add a Shoe</string>
 </resources>
