@@ -29,8 +29,16 @@ class ShoeListFragment : Fragment() {
 
         viewModel.shoes.observe(viewLifecycleOwner) { shoes ->
             shoes.forEach { shoe ->
-                val tvShoe = TextView(requireContext())
-                tvShoe.text = shoe.name
+                val tvShoe = TextView(requireContext()).apply {
+                    layoutParams = ViewGroup.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                    )
+                    val vertical = resources.getDimensionPixelOffset(R.dimen.content_vertical_margin)
+                    val horizontal = resources.getDimensionPixelOffset(R.dimen.activity_horizontal_margin)
+                    setPadding(horizontal, vertical, horizontal, vertical)
+                    text = shoe.name
+                }
                 binding.layoutShoeList.addView(tvShoe)
             }
         }
@@ -46,7 +54,7 @@ class ShoeListFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId) {
+        when (item.itemId) {
             R.id.menu_logout -> {
                 findNavController().popBackStack(R.id.loginFragment, false)
             }

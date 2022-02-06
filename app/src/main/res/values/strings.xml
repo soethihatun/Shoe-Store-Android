@@ -22,4 +22,5 @@
     <string name="instruction_fragment_label">Instruction</string>
     <string name="shoes_fragment_label">Shoes</string>
     <string name="shoe_detail_fragment_label">Add a Shoe</string>
+    <string name="invalid_information_message">Information is invalid</string>
 </resources>
