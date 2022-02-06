@@ -24,7 +24,7 @@ class InstructionFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnGoToShoes.setOnClickListener {
-            findNavController().navigate(InstructionFragmentDirections.actionInstructionFragmentToShoeGraph())
+            findNavController().navigate(InstructionFragmentDirections.actionInstructionFragmentToShoeListFragment())
         }
     }
 }

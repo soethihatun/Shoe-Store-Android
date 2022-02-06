@@ -56,7 +56,7 @@ class ShoeListFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.menu_logout -> {
-                findNavController().popBackStack(R.id.loginFragment, false)
+                findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToLoginFragment())
             }
         }
         return super.onOptionsItemSelected(item)

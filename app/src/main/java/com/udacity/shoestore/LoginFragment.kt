@@ -24,11 +24,11 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnLogin.setOnClickListener {
-            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeGraph())
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
         }
 
         binding.btnSignUp.setOnClickListener {
-            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeGraph())
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
         }
     }
 }
