@@ -16,9 +16,8 @@ class ShoeListViewModel : ViewModel() {
     private val _errorMessage = MutableLiveData<Int>()
     val errorMessage: LiveData<Int> = _errorMessage
 
-    fun addShoe(name: String, size: Double, company: String, description: String) {
+    fun addShoe(shoe: Shoe) {
         _shoes.value?.let { shoes ->
-            val shoe = Shoe(name, size, company, description)
             if (shoe.isValid) {
                 val list = shoes.toMutableList().also { it.add(shoe) }
                 _shoes.value = list

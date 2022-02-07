@@ -5,8 +5,8 @@
 
     <data>
         <variable
-            name="viewModel"
-            type="com.udacity.shoestore.ShoeListViewModel" />
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -65,7 +65,8 @@
             android:inputType="text|textCapWords"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_shoe_name"/>
+            app:layout_constraintTop_toBottomOf="@+id/tv_shoe_name"
+            android:text="@={shoe.name}"/>
 
         <EditText
             android:id="@+id/edt_shoe_company"
@@ -79,7 +80,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_company" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_company"
+            android:text="@={shoe.company}"/>
 
         <EditText
             android:id="@+id/edt_shoe_size"
@@ -92,7 +94,8 @@
             android:inputType="numberDecimal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_shoe_size"/>
+            app:layout_constraintTop_toBottomOf="@+id/tv_shoe_size"
+            android:text="@={shoe.sizeText}"/>
 
         <EditText
             android:id="@+id/edt_shoe_description"
@@ -105,7 +108,8 @@
             android:inputType="textLongMessage"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_shoe_description"/>
+            app:layout_constraintTop_toBottomOf="@+id/tv_shoe_description"
+            android:text="@={shoe.description}"/>
 
         <Button
             android:id="@+id/btn_cancel"

@@ -9,4 +9,10 @@ data class Shoe(
     val images: List<String> = mutableListOf()
 ) : Parcelable {
     val isValid: Boolean get() = name.isNotEmpty() && size > 0.0
+
+    var sizeText: String
+        get() = size.toString()
+        set(value) {
+            size = value.toDoubleOrNull() ?: 0.0
+        }
 }

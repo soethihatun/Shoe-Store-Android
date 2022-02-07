@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
+import com.udacity.shoestore.models.Shoe
 
 class ShoeDetailFragment : Fragment() {
 
@@ -16,12 +17,14 @@ class ShoeDetailFragment : Fragment() {
 
     private val viewModel by activityViewModels<ShoeListViewModel> { defaultViewModelProviderFactory }
 
+    private val shoe = Shoe("", 0.0, "", "")
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentShoeDetailBinding.inflate(inflater, container, false)
-        binding.viewModel = viewModel
+        binding.shoe = shoe
         binding.lifecycleOwner = viewLifecycleOwner
         return binding.root
     }
@@ -30,11 +33,7 @@ class ShoeDetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnSave.setOnClickListener {
-            val name = binding.edtShoeName.text.toString()
-            val size = binding.edtShoeSize.text.toString().toDoubleOrNull() ?: 0.0
-            val company = binding.edtShoeCompany.text.toString()
-            val description = binding.edtShoeDescription.text.toString()
-            viewModel.addShoe(name, size, company, description)
+            viewModel.addShoe(shoe)
         }
 
         binding.btnCancel.setOnClickListener { findNavController().popBackStack() }
